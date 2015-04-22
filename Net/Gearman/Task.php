@@ -232,7 +232,7 @@ class Net_Gearman_Task
      * @throws Net_Gearman_Exception
      */
     public function __construct($func, $arg, $uniq = null,
-                                $type = self::JOB_NORMAL)
+                                $type = self::JOB_NORMAL, $epoch = 0)
     {
         $this->func = $func;
         $this->arg  = $arg;
