@@ -61,6 +61,7 @@ class Net_Gearman_Connection
         'submit_job_high_bg' => array(32, array('func', 'uniq', 'arg')),
         'submit_job_low' => array(33, array('func', 'uniq', 'arg')),
         'submit_job_low_bg' => array(34, array('func', 'uniq', 'arg')),
+        'submit_job_epoch' => array(36, array('func', 'uniq', 'epoch', 'arg')),
         'job_created' => array(8, array('handle')),
         'grab_job' => array(9, array()),
         'no_job' => array(10, array()),
