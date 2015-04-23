@@ -3,7 +3,7 @@ Net_Gearman
 
 See https://github.com/lenn0x/net_gearman
 
-Now supporting Epoch background jobs to schedule a job at a specific timestamp.
+Now supporting Epoch (Unix Timestamp) background jobs for Gearman to schedule a job at a specific timestamp.
 It's experimental, but does it work.
 
 See examples/epoch_task.php how to use it.
