@@ -301,7 +301,7 @@ class Net_Gearman_Client
                 $task->finished = true;
             }
             $tasks->handles[$task->handle] = $task->uniq;
-            $task->jobcreated($task->uniq);
+            $task->complete($task->uniq);
             break;
         case 'error':
             throw new Net_Gearman_Exception('An error occurred');

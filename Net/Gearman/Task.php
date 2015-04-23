@@ -317,24 +317,6 @@ class Net_Gearman_Task
     }
 
     /**
-     * Run the background_job callbacks
-     * same as above, quick hack.
-     *
-     * @param object $result With the unique ID
-     *
-     * @return void
-     * @see Net_Gearman_Task::attachCallback()
-     */
-    public function jobcreated($uniqid)
-    {
-        $this->finished = true;
-        $this->result   = $uniqid;
-        foreach ($this->callback[self::JOB_BACKGROUND] as $callback) {
-            call_user_func($callback, $this->func, $this->handle, $this->result);
-        }
-    }
-
-    /**
      * Run the failure callbacks
      *
      * Failure callbacks are passed the task object job that failed
