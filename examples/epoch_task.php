@@ -26,3 +26,7 @@ $task->attachCallback("fail",Net_Gearman_Task::TASK_FAIL);
 $set->addTask($task);
 
 $client->runSet($set);
+
+if($set->finished()) {
+  echo "Tasks finished!";
+}
